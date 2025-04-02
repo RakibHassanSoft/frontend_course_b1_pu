@@ -77,7 +77,7 @@
 - 🖋️ **প্রকৃত HTML ট্যাগে সরাসরি CSS লেখা হয়।**
 - **উদাহরণ:**
   ```html
-  <p style="color: green;">এটি একটি লাল টেক্সট</p>
+  <p style="color: red;">এটি একটি লাল টেক্সট</p>
   ```
 - **ব্যবহার**: যখন ছোট পরিসরে CSS প্রয়োগ করতে হয়, সাধারণত একক এলিমেন্টের জন্য।
 
@@ -114,23 +114,20 @@
 # 🎨 CSS Properties 
 
 # 📦 ১. Box Model, Display, Positioning
-<div style="text-align: center; color: green; font-weight: bold;">
-📦 ১. Box Model, Display, Positioning
-</div>
 
 ### ✅ color 
-- **মান:** green, blue, #FF5733, rgb(255, 0, 0), rgba(255, 0, 0, 0.5)
+- **মান:** red, blue, #FF5733, rgb(255, 0, 0), rgba(255, 0, 0, 0.5)
 - **বর্ণনা:** টেক্সটের রং নির্ধারণ করে।
 
 ```html
-<p style="color: green;">এই টেক্সটটি লাল রঙের হবে</p>
+<p style="color: red;">এই টেক্সটটি লাল রঙের হবে</p>
 <p style="color: rgb(0, 128, 0);">এই টেক্সটটি সবুজ রঙের হবে</p>
 ```
 
 ---
 
 ### ✅ background-color
-- **মান:** green, #FF5733, rgb(255, 0, 0), transparent
+- **মান:** red, #FF5733, rgb(255, 0, 0), transparent
 - **বর্ণনা:** উপাদানের ব্যাকগ্রাউন্ডের রং নির্ধারণ করে।
 
 ```html
@@ -164,7 +161,7 @@
 - **বর্ণনা:** উপাদানের চারপাশে বর্ডার নির্ধারণ করে।
 
 ```html
-<div style="border: 2px solid green; padding: 10px;">green Border</div>
+<div style="border: 2px solid red; padding: 10px;">Red Border</div>
 ```
 
 ---
@@ -180,9 +177,6 @@
 ---
 
 # ✍️ ২. Typography, Text Properties, Font
-<div style="text-align: center; color: green; font-weight: bold;">
-✍️ ২. Typography, Text Properties, Font
-</div>
 
 ### ✅ font-size
 - **মান:** 16px, 1rem, 2em, large, smaller
@@ -422,9 +416,6 @@
 
 
 # 🧑‍💻 3. Positioning, Overflow, Visibility
-<div style="text-align: center; color: green; font-weight: bold;">
- 🧑‍💻 3. Positioning, Overflow, Visibility
-</div>
 
 1. **position**
 - মান: `static`, `relative`, `absolute`, `fixed`, `sticky`
@@ -491,9 +482,6 @@
 
 
 # 🎨 4. Effects and Transitions
-<div style="text-align: center; color: green; font-weight: bold;">
- 🎨 4. Effects and Transitions
-</div>
 
 1. **box-shadow**
 - মান: `2px 2px 5px rgba(0, 0, 0, 0.5)`, `0 4px 8px rgba(0, 0, 0, 0.3)`
@@ -506,12 +494,12 @@
   ```
 
 2. **text-shadow**
-- মান: `2px 2px 5px rgba(0, 0, 0, 0.5)`, `1px 1px 3px green`
+- মান: `2px 2px 5px rgba(0, 0, 0, 0.5)`, `1px 1px 3px red`
 - বর্ণনা: টেক্সটে ছায়া প্রভাব যোগ করে।
 - উদাহরণ:
   ```css
   .text {
-      text-shadow: 1px 1px 3px green;
+      text-shadow: 1px 1px 3px red;
   }
   ```
 
@@ -545,9 +533,7 @@
 
 
 # ✨ 5. Text Styles and Spacing
-<div style="text-align: center; color: green; font-weight: bold;">
- ✨ 5. Text Styles and Spacing
-</div>
+
 1. **font-style**
 - মান: `normal`, `italic`, `oblique`
 - বর্ণনা: ফন্টের স্টাইল (যেমন নর্মাল বা ইটালিক) নির্ধারণ করে।
@@ -595,7 +581,7 @@
 - সরাসরি HTML ট্যাগে লেখা হয়।
 - উদাহরণ:
   ```html
-  <p style="color: green;">This is inline CSS</p>
+  <p style="color: red;">This is inline CSS</p>
   ```
 
 ২. **Internal CSS**
@@ -626,7 +612,7 @@
 ## ৪. গুরুত্বপূর্ণ CSS Attributes (গুণাবলী)
 
 ### ১. টেক্সট ও ফন্ট
-- `color: green;` → টেক্সটের রং পরিবর্তন
+- `color: red;` → টেক্সটের রং পরিবর্তন
 - `font-size: 16px;` → ফন্টের আকার নির্ধারণ
 - `font-family: Arial, sans-serif;` → ফন্ট টাইপ নির্ধারণ
 - `font-weight: bold;` → ফন্ট মোটা করা
@@ -709,7 +695,7 @@ div {
 }
 
 div:hover {
-    background-color: green;
+    background-color: red;
 }
 ```
 
@@ -924,9 +910,9 @@ div:hover {
   ```
 - **উদাহরণ:**
   ```css
-  border: 2px solid green;
+  border: 2px solid red;
   ```
-  - এখানে, বর্ডারের প্রস্থ 2px, স্টাইল `solid` এবং রঙ `green` দেয়া হয়েছে।
+  - এখানে, বর্ডারের প্রস্থ 2px, স্টাইল `solid` এবং রঙ `red` দেয়া হয়েছে।
 
 - **আরো শর্টহ্যান্ড বিকল্প:**
   ```css
