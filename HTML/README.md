@@ -53,7 +53,8 @@ Learning HTML is the first step toward becoming a web developer.
     <title>Header Tags Example</title>
   </head>
   <body>
-    
+    <h1>Hello, World!</h1>
+     <p>Welcome to HTML basics.</p>
   </body>
 </html>
 
