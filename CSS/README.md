@@ -113,7 +113,7 @@
 
 # 🎨 CSS Properties 
 
-# 📦 ১. Box Model, Display, Positioning
+# ✨✨✨✨✨✨✨ ১. Box Model, Display, Positioning
 
 ### ✅ color 
 - **মান:** red, blue, #FF5733, rgb(255, 0, 0), rgba(255, 0, 0, 0.5)
@@ -176,7 +176,7 @@
 
 ---
 
-# ✍️ ২. Typography, Text Properties, Font
+# ✨✨✨✨✨✨✨ ২. Typography, Text Properties, Font
 
 ### ✅ font-size
 - **মান:** 16px, 1rem, 2em, large, smaller
@@ -415,7 +415,7 @@
 
 
 
-# 🧑‍💻 3. Positioning, Overflow, Visibility
+# ✨✨✨✨✨✨✨ 3. Positioning, Overflow, Visibility
 
 1. **position**
 - মান: `static`, `relative`, `absolute`, `fixed`, `sticky`
@@ -481,7 +481,7 @@
 
 
 
-# 🎨 4. Effects and Transitions
+# ✨✨✨✨✨✨✨ 4. Effects and Transitions
 
 1. **box-shadow**
 - মান: `2px 2px 5px rgba(0, 0, 0, 0.5)`, `0 4px 8px rgba(0, 0, 0, 0.3)`
@@ -532,7 +532,7 @@
 
 
 
-# ✨ 5. Text Styles and Spacing
+# ✨✨✨✨✨✨✨ 5. Text Styles and Spacing
 
 1. **font-style**
 - মান: `normal`, `italic`, `oblique`
