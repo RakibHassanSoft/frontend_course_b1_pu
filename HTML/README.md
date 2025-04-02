@@ -46,6 +46,18 @@ Learning HTML is the first step toward becoming a web developer.
 
 
 # Explanation of Basic HTML Structure  
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Header Tags Example</title>
+  </head>
+  <body>
+    
+  </body>
+</html>
+
+```
 
 ## 1. `<!DOCTYPE html>`  
 - Declares the document type as HTML5.  
