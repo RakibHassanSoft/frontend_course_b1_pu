@@ -1308,3 +1308,199 @@ console.log(factorial(5));  // Output: 120
 - কারি ফাংশনগুলির আর্গুমেন্টকে একে একে গ্রহণ করতে এবং ফাংশন পুনঃব্যবহারযোগ্য করতে সাহায্য করে।
 - রিকার্সন উপসমূহ সমাধান করার জন্য ব্যবহৃত হয় এবং কমপ্লেক্স প্রব্লেমগুলোকে ছোট ছোট টুকরোয় ভেঙে দেয়।
 
+
+
+## JavaScript Object-Oriented Programming (OOP) Guide 
+
+
+### পরিচিতি
+Object-Oriented Programming (OOP) হলো এমন একটি প্রোগ্রামিং পদ্ধতি যেখানে আমরা অবজেক্ট তৈরি করি,
+যেগুলোর মধ্যে ডেটা (properties) ও কার্যাবলী (methods) থাকে।
+JavaScript OOP কে দুটি প্রধান পদ্ধতিতে সাপোর্ট করে - Prototype-based এবং Class-based।
+
+### ১. ক্লাস (Class) এবং অবজেক্ট (Object)
+
+ES6 এর পর থেকে class keyword দিয়ে ক্লাস ডিফাইন করা যায় যা prototype ভিত্তিক OOP এর শুদ্ধ রূপ।
+
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`হ্যালো, আমি ${this.name}`);
+  }
+}
+
+const rakib = new Person('রাকিব', ২৩);
+rakib.greet();  // হ্যালো, আমি রাকিব
+```
+
+### ২. ইনহেরিটেন্স (Inheritance) — উত্তরাধিকার
+
+একটি ক্লাস অন্য একটি ক্লাস থেকে প্রপার্টি ও মেথড নেয় এবং তার নিজস্ব ফাংশনালিটি যোগ করে।
+
+```js
+class Employee extends Person {
+  constructor(name, age, position) {
+    super(name, age);
+    this.position = position;
+  }
+
+  work() {
+    console.log(`${this.name} কাজ করছে ${this.position} হিসেবে`);
+  }
+}
+
+const emp = new Employee('রাকিব', ২৩, 'Web Developer');
+emp.greet();  // হ্যালো, আমি রাকিব
+emp.work();   // রাকিব কাজ করছে Web Developer হিসেবে
+```
+
+### ৩. এনক্যাপসুলেশন (Encapsulation) — তথ্য গোপন
+
+ক্লাসের ভেতরের ডেটা বা মেথড সরাসরি বাইরে থেকে এক্সেস না দিয়ে প্রাইভেট রাখা হয়।
+
+```js
+class BankAccount {
+  #balance = 0;
+
+  deposit(amount) {
+    if (amount > 0) this.#balance += amount;
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const account = new BankAccount();
+account.deposit(1000);
+console.log(account.getBalance());  // 1000
+// account.#balance; // ❌ সরাসরি এক্সেস করা যাবে না
+```
+
+### ৪. পলিমরফিজম (Polymorphism) — একাধিক রূপ
+
+একই মেথডের ভিন্ন ভিন্ন আচরণ ইনহেরিটেন্স এর মাধ্যমে তৈরি করা যায়।
+
+```js
+class Animal {
+  speak() {
+    console.log("প্রাণী কিছু বলছে");
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    console.log("কুকুর ঘেউ ঘেউ করছে");
+  }
+}
+
+class Cat extends Animal {
+  speak() {
+    console.log("বিড়াল মিউ মিউ করছে");
+  }
+}
+
+const animals = [new Dog(), new Cat()];
+animals.forEach(a => a.speak());
+```
+
+### ৫. অ্যাবস্ট্রাকশন (Abstraction) — অভ্যন্তরীণ লজিক লুকানো
+
+প্রাইভেট মেথড বা ফিল্ড ব্যবহার করে কোডের কমপ্লেক্সিটি লুকানো হয়।
+
+```js
+class Vehicle {
+  start() {
+    this.#checkEngine();
+    console.log("ইঞ্জিন চালু হলো");
+  }
+
+  #checkEngine() {
+    console.log("ইঞ্জিন চেক সম্পন্ন");
+  }
+}
+
+const car = new Vehicle();
+car.start();
+// car.#checkEngine(); // ❌ এক্সেসযোগ্য নয়
+```
+
+### ৬. গেটার ও সেটার (Getters & Setters)
+
+ডেটা অ্যাক্সেস ও আপডেট নিয়ন্ত্রণ করার জন্য।
+
+```js
+class User {
+  constructor(name) {
+    this._name = name;
+  }
+
+  get name() {
+    return this._name.toUpperCase();
+  }
+
+  set name(newName) {
+    if (newName.length > 1) this._name = newName;
+  }
+}
+
+const user = new User("rakib");
+console.log(user.name); // RAKIB
+user.name = "raihan";
+console.log(user.name); // RAIHAN
+```
+
+### ৭. স্ট্যাটিক মেথড (Static Methods)
+
+ক্লাসের ইনস্ট্যান্স ছাড়াই কল করা যায়।
+
+```js
+class MathUtil {
+  static add(a, b) {
+    return a + b;
+  }
+}
+
+console.log(MathUtil.add(5, 10)); // 15
+```
+
+### ৮. প্রোটোটাইপ ইনহেরিটেন্স (Prototype Inheritance)
+
+JS-এ প্রত্যেক অবজেক্টের একটি প্রোটোটাইপ থাকে, যা অন্য অবজেক্ট থেকে প্রপার্টি ও মেথড পায়।
+
+```js
+const human = {
+  eat() {
+    console.log("খাচ্ছে...");
+  }
+};
+
+const student = Object.create(human);
+student.study = function () {
+  console.log("পড়াশোনা করছে...");
+};
+
+student.eat();    // খাচ্ছে...
+student.study();  // পড়াশোনা করছে...
+```
+
+### সারাংশ (Summary)
+
+| ধারণা            | JS এ কিভাবে হয়                         |
+|------------------|---------------------------------------|
+| ক্লাস (Class)      | class, constructor()                   |
+| অবজেক্ট (Object)  | class instance                        |
+| এনক্যাপসুলেশন      | private fields (#), getters/setters  |
+| ইনহেরিটেন্স       | extends, super()                      |
+| পলিমরফিজম        | method overriding                    |
+| প্রোটোটাইপ        | Object.create, __proto__              |
+
+
+
+**এই README.md ফাইল থেকে তুমি সহজেই JavaScript এর OOP এর মূল বিষয়গুলো বাংলায় শিখতে পারবে।**
+
